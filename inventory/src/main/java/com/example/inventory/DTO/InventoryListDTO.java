@@ -7,13 +7,19 @@ public class InventoryListDTO extends BaseInventoryDTO {
 
     private String PLU;
 
+    private String imageUrl;
+
+    private String imageFilename;
+
     public InventoryListDTO() {
     }
 
-    public InventoryListDTO(String itemName, int QTY, double price, UUID inventoryID, String PLU) {
+    public InventoryListDTO(String itemName, int QTY, double price, UUID inventoryID, String PLU, String imageUrl, String imageFilename) {
         super(itemName, QTY, price);
         this.inventoryID = inventoryID;
         this.PLU = PLU;
+        this.imageUrl = imageUrl;
+        this.imageFilename = imageFilename;
     }
 
     public UUID getInventoryID() {
@@ -30,5 +36,21 @@ public class InventoryListDTO extends BaseInventoryDTO {
 
     public void setPLU(String PLU) {
         this.PLU = PLU;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getImageFilename() {
+        return imageFilename;
+    }
+
+    public void setImageFilename(String imageFilename) {
+        this.imageFilename = imageFilename;
     }
 }
