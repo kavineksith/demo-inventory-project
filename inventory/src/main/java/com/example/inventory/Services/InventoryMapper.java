@@ -25,6 +25,8 @@ public class InventoryMapper {
         dto.setItemName(inventory.getItemName());
         dto.setQTY(inventory.getQTY());
         dto.setPrice(inventory.getPrice());
+        dto.setImageUrl(inventory.getImageUrl());
+        dto.setImageFilename(inventory.getImageFilename());
 
         return dto;
     }
